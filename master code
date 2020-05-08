@@ -1,53 +1,52 @@
-#have program ask user for which quiz to take
-user_input=input("Hello young scholar! Which quiz would you like to take? There is Quiz 1 which focuses on UMD facts and Quiz 2 which focuses on essay and study tips! Which one would you like to take? ")
-#if user chooses quiz 1
-if user_input == "Quiz 1" or user_input == "quiz 1":
-    #open quiz file
-    f = open("Quiz1.txt")
-    #read file
-    text = f.read()
-    #split file 
-    words = text.split("-")
-    #grab quiz questions
-    q1= words[0]
-    # print out quiz questions
-    print(q1)
-#added score component for quiz grade, set to 0
-score = 0    
-#ask user for answer
-answer1=input("Which option is the answer to Question 1? ")
-#if user guesses correctly
-if answer1 == "D" or answer1 == "d":
-    # add another point to their score
-    score=score+1
-    #tell them it's correct
-    print("Correct!")
-#if user guesses wrong
-else: 
-    #tell them right answer
-    print("Incorrect! The correct answer is D.")
-    
-#REPEAT PROCESS FOR OTHER QUIZ QUESTIONS   
-answer2=input("Which option is the answer to Question 2? ")
-if answer2 == "G" or answer2 == "g":
-    score=score+1
-    print("Correct!")
-else: 
-    print("Incorrect! The correct answer is G.")
-    
-answer3=input("Which option is the answer to Question 3? ")
-if answer3 == "J" or answer3 == "j":
-    score=score+1
-    print("Correct!")
-else: 
-    print("Incorrect! The correct answer is J.")
+'''
+DEFINING QUIZ 1
+'''
 
-answer4=input("Which option is the answer to Question 4? ")
-if answer4 == "P" or answer4 == "p":
-    score=score + 1
-    print("Correct!")
-else: 
-    print("Incorrect! The correct answer is P.")
+def quiz1():
+    #added score component for quiz grade, set to 0
+    score = 0    
+    #ask user for answer
+    answer1=input("Which option is the answer to Question 1? ")
+    #if user guesses correctly
+    if answer1 == "D" or answer1 == "d":
+        # add another point to their score
+        score=score+1
+        #tell them it's correct
+        print(" ")
+        print("Correct!")
+    #if user guesses wrong
+    else: 
+        #tell them right answer
+        print("Incorrect! The correct answer is D.")
+    #REPEAT PROCESS FOR OTHER QUIZ QUESTIONS   
+    answer2=input("Which option is the answer to Question 2? ")
+    if answer2 == "G" or answer2 == "g":
+        score=score+1
+        print(" ")
+        print("Correct!")
+    else:
+        print(" ")
+        print("Incorrect! The correct answer is G.")
 
-#print user score from quiz
-print("Your total score for Quiz 1 is: %d out of 4" %score)
+    answer3=input("Which option is the answer to Question 3? ")
+    if answer3 == "J" or answer3 == "j":
+        score=score+1
+        print(" ")
+        print("Correct!")
+    else:
+        print(" ")
+        print("Incorrect! The correct answer is J.")
+
+    answer4=input("Which option is the answer to Question 4? ")
+    if answer4 == "P" or answer4 == "p":
+        score=score + 1
+        print(" ")
+        print("Correct!")
+    else:
+        print(" ")
+        print("Incorrect! The correct answer is P.")
+
+    #print user score from quiz
+    print(" ")
+    print("Your total score for Quiz 1 is: %d out of 4" %score)
+    return
