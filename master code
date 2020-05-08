@@ -50,3 +50,95 @@ def quiz1():
     print(" ")
     print("Your total score for Quiz 1 is: %d out of 4" %score)
     return
+    
+'''
+DEFINING QUIZ 2
+'''
+
+def quiz2():
+    #added score component for quiz grade, set to 0
+    score2 = 0    
+    #ask user for answer
+    answer5=input("Which option is the answer to Question 1? ")
+    #if user guesses correctly
+    if answer5 == "C" or answer5 == "c":
+        # add another point to their score
+        score2=score2+1
+        #tell them it's correct
+        print("Correct!")
+    #if user guesses wrong
+    else: 
+        #tell them right answer
+        print("Incorrect! The correct answer is C.")
+    #REPEAT PROCESS FOR OTHER QUIZ QUESTIONS   
+    answer6=input("Which option is the answer to Question 2? ")
+    if answer6 == "E" or answer6 == "e":
+        score2=score2+1
+        print("Correct!")
+    else: 
+        print("Incorrect! The correct answer is E.")
+
+    answer7=input("Which option is the answer to Question 3? ")
+    if answer7 == "K" or answer7 == "k":
+        score2=score2+1
+        print("Correct!")
+    else: 
+        print("Incorrect! The correct answer is K.")
+
+    answer8=input("Which option is the answer to Question 4? ")
+    if answer8 == "N" or answer8 == "n":
+        score2=score2 + 1
+        print("Correct!")
+    else: 
+        print("Incorrect! The correct answer is N.")
+
+    #print user score from quiz
+    print("Your total score for Quiz 2 is: %d out of 4" %score2)
+    return
+
+"""
+FINAL CODE
+"""
+#have program ask user for which quiz to take
+print("Hello young scholar! ")
+print("There is Quiz 1 which focuses on UMD facts and Quiz 2 which focuses on essay and study tips! ")
+user_input=input("Which one would you like to take? ")
+print(" ")
+    #if user chooses quiz 1    
+if user_input == "Quiz 1" or user_input == "quiz 1":
+    #open quiz file
+    f = open("Quiz1.txt")
+    #read file
+    text = f.read()
+    #split file 
+    words = text.split("-")
+    #grab quiz questions
+    q1= words[0]
+    q2= words[1]
+    q3= words[2]
+    q4= words[3]
+    # print out quiz questions
+    print(q1)
+    print(q2)
+    print(q3)
+    print(q4)
+    quiz1()
+elif user_input == "Quiz 2" or user_input == "quiz 2":
+    #open quiz file
+    f2 = open("Quiz2.txt")
+    #read file
+    text2 = f2.read()
+    #split file 
+    words2 = text2.split("-")
+    #grab quiz questions
+    q1= words[0]
+    q2= words[1]
+    q3= words[2]
+    q4= words[3]
+    # print out quiz questions
+    print(q1)
+    print(q2)
+    print(q3)
+    print(q4)
+    quiz2()
+    
