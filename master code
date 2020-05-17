@@ -1,5 +1,5 @@
 '''
-DEFINING QUIZ 1
+DEFINING QUIZ 1 --OPEYEMI
 '''
 #define function for quiz 1
 def quiz1():
@@ -52,7 +52,7 @@ def quiz1():
     return
 
 '''
-DEFINING QUIZ 2
+DEFINING QUIZ 2--JALEN
 '''
 #define function for quiz 2
 def quiz2():
@@ -97,10 +97,11 @@ def quiz2():
     return
 
 """
-FINAL CODE
+FINAL CODE--OPEYEMI AND JALEN
 """
 print("Hello young scholar! ")
 #define a new function to hold quiz answers and questions depending one what quiz the user chooses to take
+#JALEN
 def which1():
     #have program ask user for which quiz to take
     print("There is Quiz 1 which focuses on UMD facts and Quiz 2 which focuses on essay and study tips! ")
@@ -125,6 +126,7 @@ def which1():
         print(q3)
         print(q4)
         quiz1()
+    #BOTH
     elif user_input == "Quiz 2" or user_input == "quiz 2":
         #open quiz file
         f2 = open("Quiz2.txt")
@@ -143,6 +145,7 @@ def which1():
         print(q3)
         print(q4)
         quiz2()
+    #OPEYEMI
     #if the user types a random quiz name/gibberish that is not a quiz
     #this is used in order to prevent our previous missing component where imputs outside of our establish keywords for user_imput did not return anything and left the user with nothing. Now, this component brings the function back so user can try again, imput a defined quiz name and take a quiz. 
     else:
