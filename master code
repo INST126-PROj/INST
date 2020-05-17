@@ -3,54 +3,54 @@ DEFINING QUIZ 1
 '''
 
 def quiz1():
-    #added score component for quiz grade, set to 0
-    score = 0    
-    #ask user for answer
-    answer1=input("Which option is the answer to Question 1? ")
-    #if user guesses correctly
-    if answer1 == "D" or answer1 == "d":
-        # add another point to their score
-        score=score+1
-        #tell them it's correct
-        print(" ")
-        print("Correct!")
-    #if user guesses wrong
-    else: 
-        #tell them right answer
-        print("Incorrect! The correct answer is D.")
-    #REPEAT PROCESS FOR OTHER QUIZ QUESTIONS   
-    answer2=input("Which option is the answer to Question 2? ")
-    if answer2 == "G" or answer2 == "g":
-        score=score+1
-        print(" ")
-        print("Correct!")
-    else:
-        print(" ")
-        print("Incorrect! The correct answer is G.")
+    #added score component for quiz grade, set to 0
+    score = 0    
+    #ask user for answer
+    answer1=input("Which option is the answer to Question 1? ")
+    #if user guesses correctly
+    if answer1 == "D" or answer1 == "d":
+        # add another point to their score
+        score=score+1
+        #tell them it's correct
+        print(" ")
+        print("Correct!")
+    #if user guesses wrong
+    else: 
+        #tell them right answer
+        print("Incorrect! The correct answer is D.")
+    #REPEAT PROCESS FOR OTHER QUIZ QUESTIONS   
+    answer2=input("Which option is the answer to Question 2? ")
+    if answer2 == "G" or answer2 == "g":
+        score=score+1
+        print(" ")
+        print("Correct!")
+    else:
+        print(" ")
+        print("Incorrect! The correct answer is G.")
 
-    answer3=input("Which option is the answer to Question 3? ")
-    if answer3 == "J" or answer3 == "j":
-        score=score+1
-        print(" ")
-        print("Correct!")
-    else:
-        print(" ")
-        print("Incorrect! The correct answer is J.")
+    answer3=input("Which option is the answer to Question 3? ")
+    if answer3 == "J" or answer3 == "j":
+        score=score+1
+        print(" ")
+        print("Correct!")
+    else:
+        print(" ")
+        print("Incorrect! The correct answer is J.")
 
-    answer4=input("Which option is the answer to Question 4? ")
-    if answer4 == "P" or answer4 == "p":
-        score=score + 1
-        print(" ")
-        print("Correct!")
-    else:
-        print(" ")
-        print("Incorrect! The correct answer is P.")
+    answer4=input("Which option is the answer to Question 4? ")
+    if answer4 == "P" or answer4 == "p":
+        score=score + 1
+        print(" ")
+        print("Correct!")
+    else:
+        print(" ")
+        print("Incorrect! The correct answer is P.")
 
-    #print user score from quiz
-    print(" ")
-    print("Your total score for Quiz 1 is: %d out of 4" %score)
-    return
-    
+    #print user score from quiz
+    print(" ")
+    print("Your total score for Quiz 1 is: %d out of 4" %score)
+    return
+
 '''
 DEFINING QUIZ 2
 '''
@@ -99,46 +99,51 @@ def quiz2():
 """
 FINAL CODE
 """
-#have program ask user for which quiz to take
 print("Hello young scholar! ")
-print("There is Quiz 1 which focuses on UMD facts and Quiz 2 which focuses on essay and study tips! ")
-user_input=input("Which one would you like to take? ")
-print(" ")
-    #if user chooses quiz 1    
-if user_input == "Quiz 1" or user_input == "quiz 1":
-    #open quiz file
-    f = open("Quiz1.txt")
-    #read file
-    text = f.read()
-    #split file 
-    words = text.split("-")
-    #grab quiz questions
-    q1= words[0]
-    q2= words[1]
-    q3= words[2]
-    q4= words[3]
-    # print out quiz questions
-    print(q1)
-    print(q2)
-    print(q3)
-    print(q4)
-    quiz1()
-elif user_input == "Quiz 2" or user_input == "quiz 2":
-    #open quiz file
-    f2 = open("Quiz2.txt")
-    #read file
-    text2 = f2.read()
-    #split file 
-    words2 = text2.split("-")
-    #grab quiz questions
-    q1= words[0]
-    q2= words[1]
-    q3= words[2]
-    q4= words[3]
-    # print out quiz questions
-    print(q1)
-    print(q2)
-    print(q3)
-    print(q4)
-    quiz2()
-    
+def which1():
+    #have program ask user for which quiz to take
+    print("There is Quiz 1 which focuses on UMD facts and Quiz 2 which focuses on essay and study tips! ")
+    user_input=input("Which one would you like to take? ")
+    print(" ")
+        #if user chooses quiz 1    
+    if user_input == "Quiz 1" or user_input == "quiz 1":
+        #open quiz file
+        f = open("Quiz1.txt")
+        #read file
+        text = f.read()
+        #split file 
+        words = text.split("-")
+        #grab quiz questions
+        q1= words[0]
+        q2= words[1]
+        q3= words[2]
+        q4= words[3]
+        # print out quiz questions
+        print(q1)
+        print(q2)
+        print(q3)
+        print(q4)
+        quiz1()
+    elif user_input == "Quiz 2" or user_input == "quiz 2":
+        #open quiz file
+        f2 = open("Quiz2.txt")
+        #read file
+        text2 = f2.read()
+        #split file 
+        words2 = text2.split("-")
+        #grab quiz questions
+        q1= words[0]
+        q2= words[1]
+        q3= words[2]
+        q4= words[3] 
+        # print out quiz questions
+        print(q1)
+        print(q2)
+        print(q3)
+        print(q4)
+        quiz2()
+    else:
+        print("Sorry we do not have a quiz by that name, try another one!")
+        which1()
+
+which1()
