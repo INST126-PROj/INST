@@ -135,15 +135,17 @@ def which1():
         #split file 
         words2 = text2.split("-")
         #grab quiz questions
-        q1= words[0]
-        q2= words[1]
-        q3= words[2]
-        q4= words[3] 
+        q5= words2[1]
+        q6= words2[2]
+        q7= words2[3]
+        q8= words2[4]
+        q9= words2[5]
         # print out quiz questions
-        print(q1)
-        print(q2)
-        print(q3)
-        print(q4)
+        print(q5)
+        print(q6)
+        print(q7)
+        print(q8)
+        print(q9)
         quiz2()
     #OPEYEMI
     #if the user types a random quiz name/gibberish that is not a quiz
